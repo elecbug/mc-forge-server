@@ -33,7 +33,8 @@ RUN set -eux; \
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-RUN chmod +x /usr/local/bin/entrypoint.sh \
+RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh \
+    && chmod +x /usr/local/bin/entrypoint.sh \
     && mkdir -p /data \
     && chown -R minecraft:minecraft /opt/minecraft /data
 
