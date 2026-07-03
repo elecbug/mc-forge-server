@@ -8,3 +8,4 @@ logs/
 *.log
 
 crash-reports/
+*.env
