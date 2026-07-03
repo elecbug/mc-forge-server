@@ -1,0 +1,28 @@
+services:
+  mc-forge:
+    build:
+      context: .
+      args:
+        # Adjust this to the Minecraft/Forge version you are using.
+        # For 1.20.1 Forge, Java 17 is generally safe.
+        # For 1.21.x series, Java 21 is usually more appropriate.
+        JAVA_IMAGE: eclipse-temurin:17-jre-jammy
+    container_name: mc-forge
+    restart: unless-stopped
+
+    ports:
+      - "25565:25565"
+      # If using RCON, enable it in server.properties with enable-rcon=true
+      - "25575:25575"
+
+    environment:
+      EULA: "TRUE"
+      JVM_XMS: "4G"
+      JVM_XMX: "8G"
+      JVM_ARGS: "-XX:+UseG1GC"
+
+    volumes:
+      - ./data:/data
+
+    stdin_open: true
+    tty: true

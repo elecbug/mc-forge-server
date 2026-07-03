@@ -1,0 +1,6 @@
+jar/
+data/
+world/
+logs/
+*.log
+crash-reports/
