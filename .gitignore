@@ -1,11 +1,11 @@
 jar/*
-!.gitkeep
 
-data/
-world/
+data/*
+world/*
 
-logs/
+logs/*
 *.log
 
-crash-reports/
+crash-reports/*
 *.env
+!.gitkeep
