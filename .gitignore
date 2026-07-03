@@ -1,6 +1,10 @@
-jar/
+jar/*
+!.gitkeep
+
 data/
 world/
+
 logs/
 *.log
+
 crash-reports/
