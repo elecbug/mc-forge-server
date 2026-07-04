@@ -7,7 +7,7 @@ services:
         # For 1.21.x, Java 21 is usually appropriate.
         JAVA_IMAGE: ${JAVA_IMAGE:-eclipse-temurin:17-jre-jammy}
     container_name: ${CONTAINER_NAME:-mc-forge}
-    restart: unless-stopped
+    restart: "no" # unless-stopped
 
     ports:
       - "${MC_PORT:-25565}:25565"
