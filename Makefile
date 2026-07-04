@@ -75,6 +75,8 @@ start:
 up: start
 
 logs:
+	mkdir -p logs
+	$(COMPOSE) logs > logs/"$$(date +'%Y-%m-%d %H-%M-%S')".log
 	$(COMPOSE) logs -f --tail=200
 
 ps:
