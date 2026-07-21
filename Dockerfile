@@ -3,7 +3,7 @@
 # Match this to your Minecraft/Forge version.
 # - MC 1.18 ~ 1.20.4: eclipse-temurin:17-jre-jammy
 # - MC 1.20.5+ / 1.21+: eclipse-temurin:21-jre-jammy
-ARG JAVA_IMAGE=eclipse-temurin:17-jre-jammy
+ARG JAVA_IMAGE=eclipse-temurin:21-jre-jammy
 
 FROM ${JAVA_IMAGE}
 

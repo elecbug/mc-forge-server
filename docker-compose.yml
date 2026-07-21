@@ -5,7 +5,7 @@ services:
       args:
         # For 1.20.1 Forge, Java 17 is generally safe.
         # For 1.21.x, Java 21 is usually appropriate.
-        JAVA_IMAGE: ${JAVA_IMAGE:-eclipse-temurin:17-jre-jammy}
+        JAVA_IMAGE: ${JAVA_IMAGE:-eclipse-temurin:21-jre-jammy}
     container_name: ${CONTAINER_NAME:-mc-forge}
     restart: "no" # unless-stopped
 

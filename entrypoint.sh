@@ -120,6 +120,8 @@ server_jar="$(
         | head -n 1
 )"
 
+echo "Server JAR: ${server_jar}" 
+
 if [[ -n "${server_jar}" ]]; then
     read -r -a EXTRA_JVM_ARGS <<< "${JVM_ARGS}"
     exec java -Xms"${JVM_XMS}" -Xmx"${JVM_XMX}" "${EXTRA_JVM_ARGS[@]}" -jar "${server_jar}" nogui

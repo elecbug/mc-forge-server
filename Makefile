@@ -70,7 +70,7 @@ else
 endif
 
 start:
-	$(COMPOSE) up -d
+	$(COMPOSE) up -d --build
 
 up: start
 
