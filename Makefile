@@ -39,7 +39,7 @@ endif
 .PHONY: help chmod start up logs ps status list rcon save stop down restart force-stop kill backup save-backup stop-backup clean-logs
 
 help:
-	@echo.
+	@echo
 	@echo Minecraft Forge Server Commands
 	@echo --------------------------------
 	@echo make chmod        - chmod +x scripts on Linux/WSL/macOS
@@ -56,10 +56,10 @@ help:
 	@echo make save-backup  - Save world, then backup
 	@echo make stop-backup  - Save, backup, then gracefully stop
 	@echo make clean-logs   - Delete data/logs content
-	@echo.
+	@echo
 	@echo RCON direct command:
 	@echo make rcon CMD="say hello"
-	@echo.
+	@echo
 
 chmod:
 ifeq ($(IS_WINDOWS),1)
